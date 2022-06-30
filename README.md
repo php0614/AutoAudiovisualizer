@@ -16,4 +16,5 @@ Philip Liu
 Usage
 
 1.Download the whole repository using git or direct .zip download
-2.Run with virtual server, such as Live Server in Visual code
+
+2.Run with a virtual server, such as Live Server in Visual code
