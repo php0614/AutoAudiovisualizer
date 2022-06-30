@@ -12,6 +12,7 @@ More to come
 Philip Liu
 
 
+----------------------------------------
 Usage
 
 1.Download the whole repository using git or direct .zip download
