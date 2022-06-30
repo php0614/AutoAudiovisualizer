@@ -17,4 +17,4 @@ Usage
 
 1. Download the whole repository using git or the direct .zip download
 
-2. Run with browser (Either on a virtual Server or on a real server)
+2. Run with a browser (Either on a virtual Server or on a real server)
