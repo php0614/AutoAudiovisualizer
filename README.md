@@ -5,7 +5,7 @@ Automatic Audiovisualizer with Three.js and Tone.js
 Currently there are
 
 1. 3-band Envelope Follower
-2. 3-D Sphere deformation visualizer
+2. Sphere deformation visualizer
 
 More to come
 
