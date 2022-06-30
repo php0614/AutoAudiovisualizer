@@ -9,14 +9,16 @@ document.getElementById("play").onclick = init;
 let outputLevel;
 //Meters (audio to number)
 const meterL = new Tone.DCMeter(); const meterM = new Tone.DCMeter(); const meterH = new Tone.DCMeter();
-//Envelope Followers (for low, mid, and high respectively
-//a
+//Envelope Followers (for low, mid, and high respectively)
+//adjust the three float values if needed. if one of the number is increased, it means more smoothing, and it'll result in smoother change in visual as well.
 const followerL = new Tone.Follower([0.15]); const followerM = new Tone.Follower([0.07]); const followerH = new Tone.Follower([0.02]);
 //Filters that seperate the Three frequencies
 const filterL = new Tone.Filter(300, "lowpass"); const filterH = new Tone.Filter(2000, "highpass");
 
 //audio file player
 let player = new Tone.Player("audio/bp.mp3");
+
+//these three values are the FINAL OUTPUT VALUES to be used in a visualization system, etc.
 let envF_Out_low, envF_Out_mid, envF_Out_high;
 
 
