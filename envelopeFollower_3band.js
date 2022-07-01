@@ -12,8 +12,9 @@ const meterL = new Tone.DCMeter(); const meterM = new Tone.DCMeter(); const mete
 //Envelope Followers (for low, mid, and high respectively)
 //adjust the three float values if needed. if one of the number is increased, it means more smoothing, and it'll result in smoother change in visual as well.
 const followerL = new Tone.Follower([0.15]); const followerM = new Tone.Follower([0.07]); const followerH = new Tone.Follower([0.02]);
-//Filters to seperate frequencies. Mid freqency to be refined with a combination of L+H filter
+//Filters to seperate frequencies. Mid freqency to be refined with a combination of L+H oppsite(from the original) frequency filter
 const filterL = new Tone.Filter(300, "lowpass"); const filterH = new Tone.Filter(2000, "highpass");
+const filterL_Opp = new Tone.Filter(300, "highpass"); const filterH_Opp = new Tone.Filter(2000, "lowpass");
 
 //audio file player
 let player = new Tone.Player("audio/bp.mp3");
@@ -45,8 +46,8 @@ function init(){
 
     //Envelope Follower Audio Stream 2 - mid Frequency
     player.connect(filterL);
-    filterL.connect(filterH);
-    filterH.connect(followerM);
+    filterL_Opp.connect(filterH_Opp);
+    filterH_Opp.connect(followerM);
     followerM.connect(meterM);
 
     //Envelope Follower Audio Stream 3 - high Frequency
