@@ -62,7 +62,7 @@ function animate() {
     //console.log(renderer.info.render.frame);
 
     let boxGeom = new THREE.DodecahedronBufferGeometry(parseInt(envF_Out_low*20),8);
-    for(let i = 0; i<parseInt(envF_Out_low*7); i++){
+    for(let i = 0; i<parseInt(envF_Out_low*10); i++){
         let colorIndex = Math.ceil(envF_Out_low* envF_Out_mid * 5 *colors.length -1);
         let materialSS = new THREE.MeshLambertMaterial({color: colors[colorIndex]});
 
@@ -71,8 +71,8 @@ function animate() {
        box.rotation.y = envF_Out_mid * 80;
        box.rotation.z = envF_Out_high * 80;
 
-       if(i>3){
-           box.scale.x *= envF_Out_high*20;
+       if(i>1){
+        box.position.x += envF_Out_mid;
        }
 
 
