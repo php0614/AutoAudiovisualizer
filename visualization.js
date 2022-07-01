@@ -63,7 +63,7 @@ function animate() {
 
     let boxGeom = new THREE.DodecahedronBufferGeometry(parseInt(envF_Out_low*20),8);
     for(let i = 0; i<parseInt(envF_Out_low*7); i++){
-        let colorIndex = Math.ceil(envF_Out_low* envF_Out_mid * 2 *colors.length -1);
+        let colorIndex = Math.ceil(envF_Out_low* envF_Out_mid * 5 *colors.length -1);
         let materialSS = new THREE.MeshLambertMaterial({color: colors[colorIndex]});
 
         let box = new THREE.Mesh(boxGeom, materialSS);
